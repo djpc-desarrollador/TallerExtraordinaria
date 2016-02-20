@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PolancoFinalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PolancoFinalModelStoreContainer">
+    <EntitySet Name="Alumno" EntityType="PolancoFinalModel.Store.Alumno" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Area" EntityType="PolancoFinalModel.Store.Area" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Asociado" EntityType="PolancoFinalModel.Store.Asociado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beneficiario" EntityType="PolancoFinalModel.Store.Beneficiario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Curso" EntityType="PolancoFinalModel.Store.Curso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Deporte" EntityType="PolancoFinalModel.Store.Deporte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PagoCurso" EntityType="PolancoFinalModel.Store.PagoCurso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PagoReserva" EntityType="PolancoFinalModel.Store.PagoReserva" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parentesco" EntityType="PolancoFinalModel.Store.Parentesco" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profesor" EntityType="PolancoFinalModel.Store.Profesor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Reserva" EntityType="PolancoFinalModel.Store.Reserva" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoArea" EntityType="PolancoFinalModel.Store.TipoArea" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoAsociado" EntityType="PolancoFinalModel.Store.TipoAsociado" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Area__IdTipoArea__33D4B598" Association="PolancoFinalModel.Store.FK__Area__IdTipoArea__33D4B598">
+      <End Role="TipoArea" EntitySet="TipoArea" />
+      <End Role="Area" EntitySet="Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asociado__IdTipo__34C8D9D1" Association="PolancoFinalModel.Store.FK__Asociado__IdTipo__34C8D9D1">
+      <End Role="TipoAsociado" EntitySet="TipoAsociado" />
+      <End Role="Asociado" EntitySet="Asociado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Beneficia__IdAso__35BCFE0A" Association="PolancoFinalModel.Store.FK__Beneficia__IdAso__35BCFE0A">
+      <End Role="Asociado" EntitySet="Asociado" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Beneficia__IdPar__36B12243" Association="PolancoFinalModel.Store.FK__Beneficia__IdPar__36B12243">
+      <End Role="Parentesco" EntitySet="Parentesco" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Curso__IdDeporte__37A5467C" Association="PolancoFinalModel.Store.FK__Curso__IdDeporte__37A5467C">
+      <End Role="Deporte" EntitySet="Deporte" />
+      <End Role="Curso" EntitySet="Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Curso__IdProfeso__38996AB5" Association="PolancoFinalModel.Store.FK__Curso__IdProfeso__38996AB5">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="Curso" EntitySet="Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCurso__IdAlu__398D8EEE" Association="PolancoFinalModel.Store.FK__PagoCurso__IdAlu__398D8EEE">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="PagoCurso" EntitySet="PagoCurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCurso__IdCur__3A81B327" Association="PolancoFinalModel.Store.FK__PagoCurso__IdCur__3A81B327">
+      <End Role="Curso" EntitySet="Curso" />
+      <End Role="PagoCurso" EntitySet="PagoCurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoReser__IdRes__3B75D760" Association="PolancoFinalModel.Store.FK__PagoReser__IdRes__3B75D760">
+      <End Role="Reserva" EntitySet="Reserva" />
+      <End Role="PagoReserva" EntitySet="PagoReserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reserva_Area" Association="PolancoFinalModel.Store.FK_Reserva_Area">
+      <End Role="Area" EntitySet="Area" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reserva_Asociado" Association="PolancoFinalModel.Store.FK_Reserva_Asociado">
+      <End Role="Asociado" EntitySet="Asociado" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Apellido1" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido2" Type="nchar" MaxLength="50" />
+    <Property Name="Nombres" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Observacion" Type="nchar" MaxLength="100" />
+    <Property Name="TipoAlumno" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="CedulaIdentidad" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Area">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoArea" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Asociado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoAsociado" Type="int" Nullable="false" />
+    <Property Name="Codigo" Type="int" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Apellido1" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="15" />
+    <Property Name="FechaNac" Type="date" Nullable="false" />
+    <Property Name="Sexo" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="EstadoCivil" Type="varchar" MaxLength="15" />
+    <Property Name="Celular" Type="varchar" MaxLength="10" />
+    <Property Name="CedulaIdentidad" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="FechaIngreso" Type="date" Nullable="false" />
+    <Property Name="DireccionOfi" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoOfi" Type="varchar" MaxLength="15" />
+    <Property Name="DireccionDom" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoDom" Type="varchar" MaxLength="15" />
+    <Property Name="Profesion" Type="varchar" MaxLength="40" />
+    <Property Name="Empresa" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="CargoEmpresa" Type="varchar" MaxLength="20" />
+    <Property Name="PaisProc" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CiudadProc" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Enmora" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="Imagen" Type="image" />
+  </EntityType>
+  <EntityType Name="Beneficiario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAsociado" Type="int" Nullable="false" />
+    <Property Name="IdParentesco" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido1" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido2" Type="nchar" MaxLength="50" />
+    <Property Name="FechaNac" Type="date" Nullable="false" />
+    <Property Name="CedulaIdentidad" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="Edad" Type="int" />
+  </EntityType>
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdDeporte" Type="int" Nullable="false" />
+    <Property Name="IdProfesor" Type="int" Nullable="false" />
+    <Property Name="NombreCurso" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Costo" Type="money" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="100" />
+    <Property Name="Duracion" Type="int" />
+    <Property Name="FechaInicio" Type="date" Nullable="false" />
+    <Property Name="FechaFin" Type="date" Nullable="false" />
+    <Property Name="HoraInicio" Type="time" Nullable="false" />
+    <Property Name="HoraFin" Type="time" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deporte">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nchar" Nullable="false" MaxLength="100" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PagoCurso">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdCurso" Type="int" Nullable="false" />
+    <Property Name="IdAlumno" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Monto" Type="money" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="100" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PagoReserva">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Motivo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Observacion" Type="varchar" MaxLength="50" />
+    <Property Name="Monto" Type="money" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="IdReserva" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parentesco">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profesor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoE" Type="int" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="50" />
+    <Property Name="Nombres" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CedulaIdentidad" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Telefono" Type="varchar" MaxLength="15" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdAsociado" Type="int" Nullable="false" />
+    <Property Name="CodAsociado" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Apellido2" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CedulaIdentidad" Type="varchar" MaxLength="20" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="TelefonoRef" Type="nchar" MaxLength="20" />
+    <Property Name="HoraInicio" Type="time" Precision="4" />
+    <Property Name="HoraFin" Type="time" Precision="4" />
+    <Property Name="Garantia" Type="money" />
+    <Property Name="CodigoArea" Type="int" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="50" />
+    <Property Name="Pagada" Type="bit" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="TipoArea">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoAsociado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Area__IdTipoArea__33D4B598">
+    <End Role="TipoArea" Type="PolancoFinalModel.Store.TipoArea" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Area" Type="PolancoFinalModel.Store.Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArea">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Area">
+        <PropertyRef Name="IdTipoArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asociado__IdTipo__34C8D9D1">
+    <End Role="TipoAsociado" Type="PolancoFinalModel.Store.TipoAsociado" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Asociado" Type="PolancoFinalModel.Store.Asociado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAsociado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Asociado">
+        <PropertyRef Name="IdTipoAsociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Beneficia__IdAso__35BCFE0A">
+    <End Role="Asociado" Type="PolancoFinalModel.Store.Asociado" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Beneficiario" Type="PolancoFinalModel.Store.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asociado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="IdAsociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Beneficia__IdPar__36B12243">
+    <End Role="Parentesco" Type="PolancoFinalModel.Store.Parentesco" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Beneficiario" Type="PolancoFinalModel.Store.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parentesco">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="IdParentesco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Curso__IdDeporte__37A5467C">
+    <End Role="Deporte" Type="PolancoFinalModel.Store.Deporte" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Curso" Type="PolancoFinalModel.Store.Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Deporte">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Curso">
+        <PropertyRef Name="IdDeporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Curso__IdProfeso__38996AB5">
+    <End Role="Profesor" Type="PolancoFinalModel.Store.Profesor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Curso" Type="PolancoFinalModel.Store.Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Curso">
+        <PropertyRef Name="IdProfesor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCurso__IdAlu__398D8EEE">
+    <End Role="Alumno" Type="PolancoFinalModel.Store.Alumno" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PagoCurso" Type="PolancoFinalModel.Store.PagoCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PagoCurso">
+        <PropertyRef Name="IdAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCurso__IdCur__3A81B327">
+    <End Role="Curso" Type="PolancoFinalModel.Store.Curso" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PagoCurso" Type="PolancoFinalModel.Store.PagoCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="PagoCurso">
+        <PropertyRef Name="IdCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoReser__IdRes__3B75D760">
+    <End Role="Reserva" Type="PolancoFinalModel.Store.Reserva" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PagoReserva" Type="PolancoFinalModel.Store.PagoReserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reserva">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="PagoReserva">
+        <PropertyRef Name="IdReserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reserva_Area">
+    <End Role="Area" Type="PolancoFinalModel.Store.Area" Multiplicity="1" />
+    <End Role="Reserva" Type="PolancoFinalModel.Store.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Area">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="CodigoArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reserva_Asociado">
+    <End Role="Asociado" Type="PolancoFinalModel.Store.Asociado" Multiplicity="1" />
+    <End Role="Reserva" Type="PolancoFinalModel.Store.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asociado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="IdAsociado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

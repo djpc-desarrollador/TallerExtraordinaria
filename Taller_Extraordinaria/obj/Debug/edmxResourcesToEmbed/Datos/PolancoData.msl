@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PolancoFinalModelStoreContainer" CdmEntityContainer="PolancoFinalEntities">
+    <EntitySetMapping Name="Alumno">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Alumno">
+        <MappingFragment StoreEntitySet="Alumno">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="TipoAlumno" ColumnName="TipoAlumno" />
+          <ScalarProperty Name="CedulaIdentidad" ColumnName="CedulaIdentidad" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Area">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Area">
+        <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdTipoArea" ColumnName="IdTipoArea" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asociado">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Asociado">
+        <MappingFragment StoreEntitySet="Asociado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTipoAsociado" ColumnName="IdTipoAsociado" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CedulaIdentidad" ColumnName="CedulaIdentidad" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="DireccionOfi" ColumnName="DireccionOfi" />
+          <ScalarProperty Name="TelefonoOfi" ColumnName="TelefonoOfi" />
+          <ScalarProperty Name="DireccionDom" ColumnName="DireccionDom" />
+          <ScalarProperty Name="TelefonoDom" ColumnName="TelefonoDom" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="CargoEmpresa" ColumnName="CargoEmpresa" />
+          <ScalarProperty Name="PaisProc" ColumnName="PaisProc" />
+          <ScalarProperty Name="CiudadProc" ColumnName="CiudadProc" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Enmora" ColumnName="Enmora" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beneficiario">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Beneficiario">
+        <MappingFragment StoreEntitySet="Beneficiario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAsociado" ColumnName="IdAsociado" />
+          <ScalarProperty Name="IdParentesco" ColumnName="IdParentesco" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+          <ScalarProperty Name="CedulaIdentidad" ColumnName="CedulaIdentidad" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curso">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Curso">
+        <MappingFragment StoreEntitySet="Curso">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdDeporte" ColumnName="IdDeporte" />
+          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
+          <ScalarProperty Name="NombreCurso" ColumnName="NombreCurso" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deporte">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Deporte">
+        <MappingFragment StoreEntitySet="Deporte">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PagoCurso">
+      <EntityTypeMapping TypeName="PolancoFinalModel.PagoCurso">
+        <MappingFragment StoreEntitySet="PagoCurso">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PagoReserva">
+      <EntityTypeMapping TypeName="PolancoFinalModel.PagoReserva">
+        <MappingFragment StoreEntitySet="PagoReserva">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parentesco">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Parentesco">
+        <MappingFragment StoreEntitySet="Parentesco">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesor">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Profesor">
+        <MappingFragment StoreEntitySet="Profesor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoE" ColumnName="CodigoE" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="CedulaIdentidad" ColumnName="CedulaIdentidad" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reserva">
+      <EntityTypeMapping TypeName="PolancoFinalModel.Reserva">
+        <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdAsociado" ColumnName="IdAsociado" />
+          <ScalarProperty Name="CodAsociado" ColumnName="CodAsociado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="CedulaIdentidad" ColumnName="CedulaIdentidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TelefonoRef" ColumnName="TelefonoRef" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="Garantia" ColumnName="Garantia" />
+          <ScalarProperty Name="CodigoArea" ColumnName="CodigoArea" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Pagada" ColumnName="Pagada" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoArea">
+      <EntityTypeMapping TypeName="PolancoFinalModel.TipoArea">
+        <MappingFragment StoreEntitySet="TipoArea">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAsociado">
+      <EntityTypeMapping TypeName="PolancoFinalModel.TipoAsociado">
+        <MappingFragment StoreEntitySet="TipoAsociado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

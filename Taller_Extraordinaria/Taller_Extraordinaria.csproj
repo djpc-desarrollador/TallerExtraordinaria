@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80EC22A3-6532-4256-8D85-3C80053056F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taller_Extraordinaria</RootNamespace>
+    <AssemblyName>Taller_Extraordinaria</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ambientes\NTipoArea.cs" />
+    <Compile Include="Ambientes\VistaAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambientes\VistaAreas.designer.cs">
+      <DependentUpon>VistaAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambientes\VistaDeporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambientes\VistaDeporte.designer.cs">
+      <DependentUpon>VistaDeporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambientes\VistaTipoAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambientes\VistaTipoAreas.designer.cs">
+      <DependentUpon>VistaTipoAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Alumno.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Area.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Asociado.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Beneficiario.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ConexionSQL.cs" />
+    <Compile Include="Datos\Curso.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Deporte.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\PagoCurso.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\PagoReserva.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Parentesco.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\PolancoData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolancoData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\PolancoData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\PolancoData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolancoData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Profesor.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Reserva.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TipoArea.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TipoAsociado.cs">
+      <DependentUpon>PolancoData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ambientes\NDeporte.cs" />
+    <Compile Include="Registros\FPagoReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\FPagoReserva.designer.cs">
+      <DependentUpon>FPagoReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\NCurso.cs" />
+    <Compile Include="Personas\NProfesor.cs" />
+    <Compile Include="Personas\FBeneficiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\FBeneficiarios.designer.cs">
+      <DependentUpon>FBeneficiarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\NTipoAsociado.cs" />
+    <Compile Include="Personas\VistaProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\VistaProfesores.designer.cs">
+      <DependentUpon>VistaProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\VistaTipoAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\VistaTipoAsociados.designer.cs">
+      <DependentUpon>VistaTipoAsociados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\FReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\FReservas.designer.cs">
+      <DependentUpon>FReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\GestionAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\GestionAsociados.designer.cs">
+      <DependentUpon>GestionAsociados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\NAsociado.cs" />
+    <Compile Include="Personas\NBeneficiario.cs" />
+    <Compile Include="Ambientes\NAreas.cs" />
+    <Compile Include="Personas\NParentesco.cs" />
+    <Compile Include="Registros\NPagoReserva.cs" />
+    <Compile Include="Registros\NReserva.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\VistaCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\VistaCursos.designer.cs">
+      <DependentUpon>VistaCursos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ambientes\VistaAreas.resx">
+      <DependentUpon>VistaAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambientes\VistaDeporte.resx">
+      <DependentUpon>VistaDeporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambientes\VistaTipoAreas.resx">
+      <DependentUpon>VistaTipoAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\FBeneficiarios.resx">
+      <DependentUpon>FBeneficiarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\VistaProfesores.resx">
+      <DependentUpon>VistaProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\VistaTipoAsociados.resx">
+      <DependentUpon>VistaTipoAsociados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\FPagoReserva.resx">
+      <DependentUpon>FPagoReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\FReservas.resx">
+      <DependentUpon>FReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\GestionAsociados.resx">
+      <DependentUpon>GestionAsociados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registros\VistaCursos.resx">
+      <DependentUpon>VistaCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Datos\PolancoData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PolancoData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datos\PolancoData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PolancoData.edmx</DependentUpon>
+      <LastGenOutput>PolancoData.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\PolancoData.edmx.diagram">
+      <DependentUpon>PolancoData.edmx</DependentUpon>
+    </None>
+    <None Include="Datos\PolancoData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PolancoData.edmx</DependentUpon>
+      <LastGenOutput>PolancoData.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
