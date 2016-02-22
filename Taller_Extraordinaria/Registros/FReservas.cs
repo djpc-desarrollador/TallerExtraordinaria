@@ -90,10 +90,6 @@ namespace Software
                 txtCedulaIdentidad.Text = this.rReserva.CedulaIdentidad;
                 cmbArea.SelectedValue = this.rReserva.CodigoArea;
                 dtpFechaReserva.Value = this.rReserva.Fecha.Value;
-                nupHoraInicio.Value = this.rReserva.HoraInicio.Value.Hours;
-                nupMinutoI.Value = this.rReserva.HoraInicio.Value.Minutes;
-                nupHoraFin.Value = this.rReserva.HoraFin.Value.Hours;
-                nupMinutoFin.Value = this.rReserva.HoraFin.Value.Minutes;
                 txtTelefono.Text  = this.rReserva.TelefonoRef ;
                 txtObservacion.Text = this.rReserva.Observacion;
                 txtCodigoAso.Text = Convert.ToString(this.rReserva.CodAsociado);
@@ -132,10 +128,6 @@ namespace Software
                 txtApellido2.Text = string.Empty;
                 txtCedulaIdentidad.Text = string.Empty;
                 cmbArea.SelectedValue = 1;
-                nupHoraInicio.Value = 1;
-                nupMinutoI.Value = 0;
-                nupHoraFin.Value = 1;
-                nupMinutoFin.Value = 0;
                 txtTelefono.Text = string.Empty;
                 txtObservacion.Text = string.Empty ;
                 txtCodigoAso.Text = string.Empty;

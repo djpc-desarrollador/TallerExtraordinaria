@@ -184,6 +184,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -200,14 +201,15 @@
             // 
             this.errorDescripcion.ContainerControl = this;
             // 
-            // H5_Vista
+            // VistaDeporte
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(451, 482);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxTipoArea);
-            this.Name = "H5_Vista";
+            this.Name = "VistaDeporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRACION DE Deporte";
             this.Load += new System.EventHandler(this.Form_Load);

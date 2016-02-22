@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBoxTipoArea = new System.Windows.Forms.GroupBox();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.labelCi = new System.Windows.Forms.Label();
+            this.textBoxCi = new System.Windows.Forms.TextBox();
+            this.labelNombres = new System.Windows.Forms.Label();
+            this.textBoxNombres = new System.Windows.Forms.TextBox();
+            this.labelApellido2 = new System.Windows.Forms.Label();
+            this.textBoxApellido2 = new System.Windows.Forms.TextBox();
             this.labelApellido1 = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.textBoxApellido1 = new System.Windows.Forms.TextBox();
@@ -43,14 +51,6 @@
             this.groupBoxRegistros = new System.Windows.Forms.GroupBox();
             this.dataGridViewRegistros = new System.Windows.Forms.DataGridView();
             this.errorApellido1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBoxApellido2 = new System.Windows.Forms.TextBox();
-            this.labelApellido2 = new System.Windows.Forms.Label();
-            this.textBoxNombres = new System.Windows.Forms.TextBox();
-            this.labelNombres = new System.Windows.Forms.Label();
-            this.textBoxCi = new System.Windows.Forms.TextBox();
-            this.labelCi = new System.Windows.Forms.Label();
-            this.textBoxTelefono = new System.Windows.Forms.TextBox();
-            this.labelTelefono = new System.Windows.Forms.Label();
             this.errorNombres = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorCi = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxTipoArea.SuspendLayout();
@@ -85,13 +85,85 @@
             this.groupBoxTipoArea.TabStop = false;
             this.groupBoxTipoArea.Text = "1. Datos";
             // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.Location = new System.Drawing.Point(7, 153);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(52, 13);
+            this.labelTelefono.TabIndex = 10;
+            this.labelTelefono.Text = "Teléfono:";
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTelefono.Location = new System.Drawing.Point(65, 150);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(321, 20);
+            this.textBoxTelefono.TabIndex = 11;
+            // 
+            // labelCi
+            // 
+            this.labelCi.AutoSize = true;
+            this.labelCi.Location = new System.Drawing.Point(7, 131);
+            this.labelCi.Name = "labelCi";
+            this.labelCi.Size = new System.Drawing.Size(26, 13);
+            this.labelCi.TabIndex = 8;
+            this.labelCi.Text = "C.I.:";
+            // 
+            // textBoxCi
+            // 
+            this.textBoxCi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCi.Location = new System.Drawing.Point(39, 124);
+            this.textBoxCi.Name = "textBoxCi";
+            this.textBoxCi.Size = new System.Drawing.Size(347, 20);
+            this.textBoxCi.TabIndex = 9;
+            // 
+            // labelNombres
+            // 
+            this.labelNombres.AutoSize = true;
+            this.labelNombres.Location = new System.Drawing.Point(6, 101);
+            this.labelNombres.Name = "labelNombres";
+            this.labelNombres.Size = new System.Drawing.Size(52, 13);
+            this.labelNombres.TabIndex = 6;
+            this.labelNombres.Text = "Nombres:";
+            // 
+            // textBoxNombres
+            // 
+            this.textBoxNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNombres.Location = new System.Drawing.Point(64, 98);
+            this.textBoxNombres.Name = "textBoxNombres";
+            this.textBoxNombres.Size = new System.Drawing.Size(322, 20);
+            this.textBoxNombres.TabIndex = 7;
+            // 
+            // labelApellido2
+            // 
+            this.labelApellido2.AutoSize = true;
+            this.labelApellido2.Location = new System.Drawing.Point(6, 75);
+            this.labelApellido2.Name = "labelApellido2";
+            this.labelApellido2.Size = new System.Drawing.Size(53, 13);
+            this.labelApellido2.TabIndex = 4;
+            this.labelApellido2.Text = "Apellido2:";
+            // 
+            // textBoxApellido2
+            // 
+            this.textBoxApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxApellido2.Location = new System.Drawing.Point(65, 72);
+            this.textBoxApellido2.Name = "textBoxApellido2";
+            this.textBoxApellido2.Size = new System.Drawing.Size(321, 20);
+            this.textBoxApellido2.TabIndex = 5;
+            // 
             // labelApellido1
             // 
             this.labelApellido1.AutoSize = true;
             this.labelApellido1.Location = new System.Drawing.Point(6, 50);
             this.labelApellido1.Name = "labelApellido1";
             this.labelApellido1.Size = new System.Drawing.Size(53, 13);
-            this.labelApellido1.TabIndex = 3;
+            this.labelApellido1.TabIndex = 2;
             this.labelApellido1.Text = "Apellido1:";
             // 
             // labelCodigo
@@ -100,7 +172,7 @@
             this.labelCodigo.Location = new System.Drawing.Point(6, 23);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(43, 13);
-            this.labelCodigo.TabIndex = 2;
+            this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "Código:";
             // 
             // textBoxApellido1
@@ -110,7 +182,7 @@
             this.textBoxApellido1.Location = new System.Drawing.Point(65, 46);
             this.textBoxApellido1.Name = "textBoxApellido1";
             this.textBoxApellido1.Size = new System.Drawing.Size(321, 20);
-            this.textBoxApellido1.TabIndex = 1;
+            this.textBoxApellido1.TabIndex = 3;
             // 
             // textBoxCodigo
             // 
@@ -118,7 +190,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(55, 20);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(87, 20);
-            this.textBoxCodigo.TabIndex = 0;
+            this.textBoxCodigo.TabIndex = 1;
             this.textBoxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBoxOperaciones
@@ -204,6 +276,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -220,78 +293,6 @@
             // 
             this.errorApellido1.ContainerControl = this;
             // 
-            // textBoxApellido2
-            // 
-            this.textBoxApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxApellido2.Location = new System.Drawing.Point(65, 72);
-            this.textBoxApellido2.Name = "textBoxApellido2";
-            this.textBoxApellido2.Size = new System.Drawing.Size(321, 20);
-            this.textBoxApellido2.TabIndex = 4;
-            // 
-            // labelApellido2
-            // 
-            this.labelApellido2.AutoSize = true;
-            this.labelApellido2.Location = new System.Drawing.Point(6, 75);
-            this.labelApellido2.Name = "labelApellido2";
-            this.labelApellido2.Size = new System.Drawing.Size(53, 13);
-            this.labelApellido2.TabIndex = 5;
-            this.labelApellido2.Text = "Apellido2:";
-            // 
-            // textBoxNombres
-            // 
-            this.textBoxNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNombres.Location = new System.Drawing.Point(64, 98);
-            this.textBoxNombres.Name = "textBoxNombres";
-            this.textBoxNombres.Size = new System.Drawing.Size(322, 20);
-            this.textBoxNombres.TabIndex = 6;
-            // 
-            // labelNombres
-            // 
-            this.labelNombres.AutoSize = true;
-            this.labelNombres.Location = new System.Drawing.Point(6, 101);
-            this.labelNombres.Name = "labelNombres";
-            this.labelNombres.Size = new System.Drawing.Size(52, 13);
-            this.labelNombres.TabIndex = 7;
-            this.labelNombres.Text = "Nombres:";
-            // 
-            // textBoxCi
-            // 
-            this.textBoxCi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCi.Location = new System.Drawing.Point(39, 124);
-            this.textBoxCi.Name = "textBoxCi";
-            this.textBoxCi.Size = new System.Drawing.Size(347, 20);
-            this.textBoxCi.TabIndex = 8;
-            // 
-            // labelCi
-            // 
-            this.labelCi.AutoSize = true;
-            this.labelCi.Location = new System.Drawing.Point(7, 131);
-            this.labelCi.Name = "labelCi";
-            this.labelCi.Size = new System.Drawing.Size(26, 13);
-            this.labelCi.TabIndex = 9;
-            this.labelCi.Text = "C.I.:";
-            // 
-            // textBoxTelefono
-            // 
-            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTelefono.Location = new System.Drawing.Point(65, 150);
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(321, 20);
-            this.textBoxTelefono.TabIndex = 10;
-            // 
-            // labelTelefono
-            // 
-            this.labelTelefono.AutoSize = true;
-            this.labelTelefono.Location = new System.Drawing.Point(7, 153);
-            this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(52, 13);
-            this.labelTelefono.TabIndex = 11;
-            this.labelTelefono.Text = "Teléfono:";
-            // 
             // errorNombres
             // 
             this.errorNombres.ContainerControl = this;
@@ -300,14 +301,15 @@
             // 
             this.errorCi.ContainerControl = this;
             // 
-            // H1_Vista
+            // VistaProfesor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(441, 533);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxTipoArea);
-            this.Name = "H1_Vista";
+            this.Name = "VistaProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRAR PROFESOR";
             this.Load += new System.EventHandler(this.Form_Load);

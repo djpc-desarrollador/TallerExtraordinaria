@@ -77,7 +77,7 @@
             this.labelDescripcion.Location = new System.Drawing.Point(6, 50);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.labelDescripcion.TabIndex = 3;
+            this.labelDescripcion.TabIndex = 2;
             this.labelDescripcion.Text = "&Descripción:";
             // 
             // labelCodigo
@@ -86,7 +86,7 @@
             this.labelCodigo.Location = new System.Drawing.Point(6, 23);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(43, 13);
-            this.labelCodigo.TabIndex = 2;
+            this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "&Código:";
             // 
             // textBoxDescripcion
@@ -96,7 +96,7 @@
             this.textBoxDescripcion.Location = new System.Drawing.Point(78, 47);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(336, 20);
-            this.textBoxDescripcion.TabIndex = 1;
+            this.textBoxDescripcion.TabIndex = 3;
             // 
             // textBoxCodigo
             // 
@@ -104,7 +104,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(55, 20);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(87, 20);
-            this.textBoxCodigo.TabIndex = 0;
+            this.textBoxCodigo.TabIndex = 1;
             this.textBoxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBoxOperaciones
@@ -119,7 +119,7 @@
             this.groupBoxOperaciones.Location = new System.Drawing.Point(12, 151);
             this.groupBoxOperaciones.Name = "groupBoxOperaciones";
             this.groupBoxOperaciones.Size = new System.Drawing.Size(421, 56);
-            this.groupBoxOperaciones.TabIndex = 1;
+            this.groupBoxOperaciones.TabIndex = 2;
             this.groupBoxOperaciones.TabStop = false;
             this.groupBoxOperaciones.Text = "3. Operaciones";
             // 
@@ -182,7 +182,7 @@
             this.groupBoxRegistros.Location = new System.Drawing.Point(13, 213);
             this.groupBoxRegistros.Name = "groupBoxRegistros";
             this.groupBoxRegistros.Size = new System.Drawing.Size(420, 257);
-            this.groupBoxRegistros.TabIndex = 2;
+            this.groupBoxRegistros.TabIndex = 3;
             this.groupBoxRegistros.TabStop = false;
             this.groupBoxRegistros.Text = "4. Area registradas";
             // 
@@ -190,6 +190,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -213,7 +214,7 @@
             this.groupBoxTipoArea.Location = new System.Drawing.Point(12, 96);
             this.groupBoxTipoArea.Name = "groupBoxTipoArea";
             this.groupBoxTipoArea.Size = new System.Drawing.Size(421, 49);
-            this.groupBoxTipoArea.TabIndex = 3;
+            this.groupBoxTipoArea.TabIndex = 1;
             this.groupBoxTipoArea.TabStop = false;
             this.groupBoxTipoArea.Text = "2. Tipo de area";
             // 
@@ -223,7 +224,7 @@
             this.labelTipoArea.Location = new System.Drawing.Point(7, 23);
             this.labelTipoArea.Name = "labelTipoArea";
             this.labelTipoArea.Size = new System.Drawing.Size(68, 13);
-            this.labelTipoArea.TabIndex = 1;
+            this.labelTipoArea.TabIndex = 0;
             this.labelTipoArea.Text = "Pertenece a:";
             // 
             // comboBoxTipoArea
@@ -232,22 +233,23 @@
             this.comboBoxTipoArea.Location = new System.Drawing.Point(81, 20);
             this.comboBoxTipoArea.Name = "comboBoxTipoArea";
             this.comboBoxTipoArea.Size = new System.Drawing.Size(334, 21);
-            this.comboBoxTipoArea.TabIndex = 0;
+            this.comboBoxTipoArea.TabIndex = 1;
             this.comboBoxTipoArea.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipoArea_SelectedIndexChanged);
             // 
             // errorTipoArea
             // 
             this.errorTipoArea.ContainerControl = this;
             // 
-            // H3_Vista
+            // VistaArea
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 482);
             this.Controls.Add(this.groupBoxTipoArea);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxArea);
-            this.Name = "H3_Vista";
+            this.Name = "VistaArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRACION DE Area";
             this.Load += new System.EventHandler(this.form_Load);

@@ -286,6 +286,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -382,16 +383,17 @@
             // 
             this.errorProfesor.ContainerControl = this;
             // 
-            // H6_Vista
+            // VistaCurso
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(446, 641);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxTipoArea);
-            this.Name = "H6_Vista";
+            this.Name = "VistaCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRACION DE Curso";
             this.Load += new System.EventHandler(this.Form_Load);

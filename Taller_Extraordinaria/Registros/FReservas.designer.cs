@@ -65,6 +65,7 @@
             this.grpArea = new System.Windows.Forms.GroupBox();
             this.cmbArea = new System.Windows.Forms.ComboBox();
             this.grbReserva = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblCodigoReserva = new System.Windows.Forms.Label();
             this.txtCodReserva = new System.Windows.Forms.TextBox();
             this.grbGarantia = new System.Windows.Forms.GroupBox();
@@ -77,14 +78,10 @@
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.grbFinReserva = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.nupMinutoFin = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nupHoraFin = new System.Windows.Forms.NumericUpDown();
+            this.horaDeFin = new System.Windows.Forms.MaskedTextBox();
             this.grbInicioReserva = new System.Windows.Forms.GroupBox();
-            this.lblMinuto = new System.Windows.Forms.Label();
-            this.nupMinutoI = new System.Windows.Forms.NumericUpDown();
+            this.horaDeInicio = new System.Windows.Forms.MaskedTextBox();
             this.lblHora = new System.Windows.Forms.Label();
-            this.nupHoraInicio = new System.Windows.Forms.NumericUpDown();
             this.lblFechaReserva = new System.Windows.Forms.Label();
             this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
             this.grbTipoUsu = new System.Windows.Forms.GroupBox();
@@ -106,9 +103,6 @@
             this.lblNombreAso = new System.Windows.Forms.Label();
             this.txtCodigoAso = new System.Windows.Forms.TextBox();
             this.tTip = new System.Windows.Forms.ToolTip(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.horaDeInicio = new System.Windows.Forms.MaskedTextBox();
-            this.horaDeFin = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,11 +115,7 @@
             this.grbReserva.SuspendLayout();
             this.grbGarantia.SuspendLayout();
             this.grbFinReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMinutoFin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHoraFin)).BeginInit();
             this.grbInicioReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMinutoI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHoraInicio)).BeginInit();
             this.grbTipoUsu.SuspendLayout();
             this.gbInfoAsociado.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +128,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(656, 525);
+            this.tabControl1.Size = new System.Drawing.Size(718, 559);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
@@ -149,35 +139,41 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(648, 499);
+            this.tabPage2.Size = new System.Drawing.Size(710, 533);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Busqueda";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dgvResult);
-            this.groupBox1.Location = new System.Drawing.Point(7, 292);
+            this.groupBox1.Location = new System.Drawing.Point(6, 266);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(611, 166);
+            this.groupBox1.Size = new System.Drawing.Size(696, 259);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultados";
             // 
             // dgvResult
             // 
-            this.dgvResult.BackgroundColor = System.Drawing.Color.Ivory;
+            this.dgvResult.BackgroundColor = System.Drawing.Color.White;
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResult.GridColor = System.Drawing.Color.YellowGreen;
-            this.dgvResult.Location = new System.Drawing.Point(6, 20);
+            this.dgvResult.Location = new System.Drawing.Point(3, 16);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.ReadOnly = true;
-            this.dgvResult.Size = new System.Drawing.Size(599, 138);
+            this.dgvResult.Size = new System.Drawing.Size(690, 240);
             this.dgvResult.TabIndex = 0;
             this.dgvResult.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvResult_RowHeaderMouseClick);
             // 
             // grbBusqueda
             // 
+            this.grbBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbBusqueda.Controls.Add(this.txt1CodigoReserva);
             this.grbBusqueda.Controls.Add(this.lbl1CodigoReserva);
             this.grbBusqueda.Controls.Add(this.txt1Cedula);
@@ -194,9 +190,9 @@
             this.grbBusqueda.Controls.Add(this.txt1Apellido2);
             this.grbBusqueda.Controls.Add(this.lbl1FechaReserva);
             this.grbBusqueda.Controls.Add(this.dtp1FechaReserva);
-            this.grbBusqueda.Location = new System.Drawing.Point(7, 94);
+            this.grbBusqueda.Location = new System.Drawing.Point(6, 84);
             this.grbBusqueda.Name = "grbBusqueda";
-            this.grbBusqueda.Size = new System.Drawing.Size(611, 192);
+            this.grbBusqueda.Size = new System.Drawing.Size(708, 176);
             this.grbBusqueda.TabIndex = 28;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Busqueda de Reserva";
@@ -204,7 +200,7 @@
             // txt1CodigoReserva
             // 
             this.txt1CodigoReserva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1CodigoReserva.Location = new System.Drawing.Point(343, 41);
+            this.txt1CodigoReserva.Location = new System.Drawing.Point(263, 32);
             this.txt1CodigoReserva.Name = "txt1CodigoReserva";
             this.txt1CodigoReserva.Size = new System.Drawing.Size(200, 20);
             this.txt1CodigoReserva.TabIndex = 69;
@@ -213,7 +209,7 @@
             // lbl1CodigoReserva
             // 
             this.lbl1CodigoReserva.AutoSize = true;
-            this.lbl1CodigoReserva.Location = new System.Drawing.Point(343, 25);
+            this.lbl1CodigoReserva.Location = new System.Drawing.Point(260, 16);
             this.lbl1CodigoReserva.Name = "lbl1CodigoReserva";
             this.lbl1CodigoReserva.Size = new System.Drawing.Size(83, 13);
             this.lbl1CodigoReserva.TabIndex = 68;
@@ -222,7 +218,7 @@
             // txt1Cedula
             // 
             this.txt1Cedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Cedula.Location = new System.Drawing.Point(342, 80);
+            this.txt1Cedula.Location = new System.Drawing.Point(263, 71);
             this.txt1Cedula.Name = "txt1Cedula";
             this.txt1Cedula.Size = new System.Drawing.Size(201, 20);
             this.txt1Cedula.TabIndex = 67;
@@ -231,7 +227,7 @@
             // lbl1Cedula
             // 
             this.lbl1Cedula.AutoSize = true;
-            this.lbl1Cedula.Location = new System.Drawing.Point(343, 66);
+            this.lbl1Cedula.Location = new System.Drawing.Point(260, 55);
             this.lbl1Cedula.Name = "lbl1Cedula";
             this.lbl1Cedula.Size = new System.Drawing.Size(87, 13);
             this.lbl1Cedula.TabIndex = 66;
@@ -240,7 +236,7 @@
             // txt1Interno
             // 
             this.txt1Interno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Interno.Location = new System.Drawing.Point(342, 120);
+            this.txt1Interno.Location = new System.Drawing.Point(263, 110);
             this.txt1Interno.Name = "txt1Interno";
             this.txt1Interno.ReadOnly = true;
             this.txt1Interno.Size = new System.Drawing.Size(201, 20);
@@ -250,7 +246,7 @@
             // lbl1Interno
             // 
             this.lbl1Interno.AutoSize = true;
-            this.lbl1Interno.Location = new System.Drawing.Point(343, 106);
+            this.lbl1Interno.Location = new System.Drawing.Point(260, 94);
             this.lbl1Interno.Name = "lbl1Interno";
             this.lbl1Interno.Size = new System.Drawing.Size(76, 13);
             this.lbl1Interno.TabIndex = 64;
@@ -259,7 +255,7 @@
             // txt1Codigo
             // 
             this.txt1Codigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Codigo.Location = new System.Drawing.Point(343, 160);
+            this.txt1Codigo.Location = new System.Drawing.Point(263, 149);
             this.txt1Codigo.MaxLength = 7;
             this.txt1Codigo.Name = "txt1Codigo";
             this.txt1Codigo.ReadOnly = true;
@@ -270,7 +266,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(340, 143);
+            this.label13.Location = new System.Drawing.Point(260, 133);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 13);
             this.label13.TabIndex = 62;
@@ -279,7 +275,7 @@
             // txt1Apellido1
             // 
             this.txt1Apellido1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Apellido1.Location = new System.Drawing.Point(51, 119);
+            this.txt1Apellido1.Location = new System.Drawing.Point(6, 110);
             this.txt1Apellido1.MaxLength = 15;
             this.txt1Apellido1.Name = "txt1Apellido1";
             this.txt1Apellido1.Size = new System.Drawing.Size(237, 20);
@@ -287,9 +283,8 @@
             // 
             // txt1Nombre
             // 
-            this.txt1Nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt1Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Nombre.Location = new System.Drawing.Point(51, 80);
+            this.txt1Nombre.Location = new System.Drawing.Point(6, 71);
             this.txt1Nombre.MaxLength = 20;
             this.txt1Nombre.Name = "txt1Nombre";
             this.txt1Nombre.Size = new System.Drawing.Size(237, 20);
@@ -298,7 +293,7 @@
             // lbl1Nombre
             // 
             this.lbl1Nombre.AutoSize = true;
-            this.lbl1Nombre.Location = new System.Drawing.Point(48, 64);
+            this.lbl1Nombre.Location = new System.Drawing.Point(6, 55);
             this.lbl1Nombre.Name = "lbl1Nombre";
             this.lbl1Nombre.Size = new System.Drawing.Size(49, 13);
             this.lbl1Nombre.TabIndex = 57;
@@ -307,7 +302,7 @@
             // lbl1Apellido1
             // 
             this.lbl1Apellido1.AutoSize = true;
-            this.lbl1Apellido1.Location = new System.Drawing.Point(48, 103);
+            this.lbl1Apellido1.Location = new System.Drawing.Point(4, 94);
             this.lbl1Apellido1.Name = "lbl1Apellido1";
             this.lbl1Apellido1.Size = new System.Drawing.Size(76, 13);
             this.lbl1Apellido1.TabIndex = 58;
@@ -316,7 +311,7 @@
             // lbl1Apellido2
             // 
             this.lbl1Apellido2.AutoSize = true;
-            this.lbl1Apellido2.Location = new System.Drawing.Point(48, 142);
+            this.lbl1Apellido2.Location = new System.Drawing.Point(6, 133);
             this.lbl1Apellido2.Name = "lbl1Apellido2";
             this.lbl1Apellido2.Size = new System.Drawing.Size(90, 13);
             this.lbl1Apellido2.TabIndex = 60;
@@ -325,7 +320,7 @@
             // txt1Apellido2
             // 
             this.txt1Apellido2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt1Apellido2.Location = new System.Drawing.Point(51, 158);
+            this.txt1Apellido2.Location = new System.Drawing.Point(6, 149);
             this.txt1Apellido2.MaxLength = 15;
             this.txt1Apellido2.Name = "txt1Apellido2";
             this.txt1Apellido2.Size = new System.Drawing.Size(237, 20);
@@ -334,7 +329,7 @@
             // lbl1FechaReserva
             // 
             this.lbl1FechaReserva.AutoSize = true;
-            this.lbl1FechaReserva.Location = new System.Drawing.Point(48, 25);
+            this.lbl1FechaReserva.Location = new System.Drawing.Point(2, 16);
             this.lbl1FechaReserva.Name = "lbl1FechaReserva";
             this.lbl1FechaReserva.Size = new System.Drawing.Size(95, 13);
             this.lbl1FechaReserva.TabIndex = 23;
@@ -342,19 +337,21 @@
             // 
             // dtp1FechaReserva
             // 
-            this.dtp1FechaReserva.Location = new System.Drawing.Point(51, 41);
+            this.dtp1FechaReserva.Location = new System.Drawing.Point(6, 32);
             this.dtp1FechaReserva.Name = "dtp1FechaReserva";
             this.dtp1FechaReserva.Size = new System.Drawing.Size(237, 20);
             this.dtp1FechaReserva.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel2.Controls.Add(this.btnBuscar);
             this.flowLayoutPanel2.Controls.Add(this.btnPasarTodo);
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 6);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(625, 82);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(708, 72);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // btnBuscar
@@ -413,13 +410,15 @@
             this.tbpReserva.Location = new System.Drawing.Point(4, 22);
             this.tbpReserva.Name = "tbpReserva";
             this.tbpReserva.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpReserva.Size = new System.Drawing.Size(648, 499);
+            this.tbpReserva.Size = new System.Drawing.Size(710, 533);
             this.tbpReserva.TabIndex = 0;
             this.tbpReserva.Text = "Reserva";
             this.tbpReserva.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.btnNew);
             this.flowLayoutPanel1.Controls.Add(this.btnRegister);
             this.flowLayoutPanel1.Controls.Add(this.btnEdit);
@@ -427,7 +426,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnCancel);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(611, 69);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(698, 69);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnNew
@@ -506,24 +505,30 @@
             // 
             // grpArea
             // 
+            this.grpArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpArea.Controls.Add(this.cmbArea);
-            this.grpArea.Location = new System.Drawing.Point(322, 91);
+            this.grpArea.Location = new System.Drawing.Point(169, 81);
             this.grpArea.Name = "grpArea";
-            this.grpArea.Size = new System.Drawing.Size(295, 66);
+            this.grpArea.Size = new System.Drawing.Size(535, 48);
             this.grpArea.TabIndex = 2;
             this.grpArea.TabStop = false;
             this.grpArea.Text = "Seleccion de Area";
             // 
             // cmbArea
             // 
+            this.cmbArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(15, 27);
+            this.cmbArea.Location = new System.Drawing.Point(3, 16);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(274, 21);
+            this.cmbArea.Size = new System.Drawing.Size(529, 21);
             this.cmbArea.TabIndex = 0;
             // 
             // grbReserva
             // 
+            this.grbReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbReserva.Controls.Add(this.button2);
             this.grbReserva.Controls.Add(this.lblCodigoReserva);
             this.grbReserva.Controls.Add(this.txtCodReserva);
@@ -532,17 +537,27 @@
             this.grbReserva.Controls.Add(this.grbInicioReserva);
             this.grbReserva.Controls.Add(this.lblFechaReserva);
             this.grbReserva.Controls.Add(this.dtpFechaReserva);
-            this.grbReserva.Location = new System.Drawing.Point(6, 313);
+            this.grbReserva.Location = new System.Drawing.Point(6, 277);
             this.grbReserva.Name = "grbReserva";
-            this.grbReserva.Size = new System.Drawing.Size(611, 230);
+            this.grbReserva.Size = new System.Drawing.Size(698, 250);
             this.grbReserva.TabIndex = 4;
             this.grbReserva.TabStop = false;
             this.grbReserva.Text = "Informacion Reserva";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(456, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 56);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Verificar reserva";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // lblCodigoReserva
             // 
             this.lblCodigoReserva.AutoSize = true;
-            this.lblCodigoReserva.Location = new System.Drawing.Point(15, 19);
+            this.lblCodigoReserva.Location = new System.Drawing.Point(6, 16);
             this.lblCodigoReserva.Name = "lblCodigoReserva";
             this.lblCodigoReserva.Size = new System.Drawing.Size(83, 13);
             this.lblCodigoReserva.TabIndex = 29;
@@ -551,15 +566,18 @@
             // txtCodReserva
             // 
             this.txtCodReserva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodReserva.Location = new System.Drawing.Point(14, 39);
+            this.txtCodReserva.Location = new System.Drawing.Point(6, 32);
             this.txtCodReserva.Name = "txtCodReserva";
             this.txtCodReserva.ReadOnly = true;
-            this.txtCodReserva.Size = new System.Drawing.Size(118, 20);
+            this.txtCodReserva.Size = new System.Drawing.Size(201, 20);
             this.txtCodReserva.TabIndex = 0;
             this.txtCodReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // grbGarantia
             // 
+            this.grbGarantia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbGarantia.Controls.Add(this.lblbs);
             this.grbGarantia.Controls.Add(this.txtObservacion);
             this.grbGarantia.Controls.Add(this.lblObservacion);
@@ -567,9 +585,9 @@
             this.grbGarantia.Controls.Add(this.lblGarantia);
             this.grbGarantia.Controls.Add(this.rbNo);
             this.grbGarantia.Controls.Add(this.rbSi);
-            this.grbGarantia.Location = new System.Drawing.Point(5, 120);
+            this.grbGarantia.Location = new System.Drawing.Point(6, 97);
             this.grbGarantia.Name = "grbGarantia";
-            this.grbGarantia.Size = new System.Drawing.Size(571, 110);
+            this.grbGarantia.Size = new System.Drawing.Size(686, 147);
             this.grbGarantia.TabIndex = 4;
             this.grbGarantia.TabStop = false;
             this.grbGarantia.Text = "Garantia";
@@ -577,7 +595,7 @@
             // lblbs
             // 
             this.lblbs.AutoSize = true;
-            this.lblbs.Location = new System.Drawing.Point(329, 35);
+            this.lblbs.Location = new System.Drawing.Point(173, 42);
             this.lblbs.Name = "lblbs";
             this.lblbs.Size = new System.Drawing.Size(22, 13);
             this.lblbs.TabIndex = 27;
@@ -585,19 +603,22 @@
             // 
             // txtObservacion
             // 
+            this.txtObservacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtObservacion.Location = new System.Drawing.Point(85, 67);
+            this.txtObservacion.Location = new System.Drawing.Point(6, 78);
             this.txtObservacion.MaxLength = 100;
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservacion.Size = new System.Drawing.Size(468, 20);
+            this.txtObservacion.Size = new System.Drawing.Size(674, 63);
             this.txtObservacion.TabIndex = 4;
             // 
             // lblObservacion
             // 
             this.lblObservacion.AutoSize = true;
-            this.lblObservacion.Location = new System.Drawing.Point(12, 70);
+            this.lblObservacion.Location = new System.Drawing.Point(6, 62);
             this.lblObservacion.Name = "lblObservacion";
             this.lblObservacion.Size = new System.Drawing.Size(67, 13);
             this.lblObservacion.TabIndex = 25;
@@ -605,7 +626,7 @@
             // 
             // txtGarantia
             // 
-            this.txtGarantia.Location = new System.Drawing.Point(208, 31);
+            this.txtGarantia.Location = new System.Drawing.Point(52, 39);
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(115, 20);
             this.txtGarantia.TabIndex = 3;
@@ -613,7 +634,7 @@
             // lblGarantia
             // 
             this.lblGarantia.AutoSize = true;
-            this.lblGarantia.Location = new System.Drawing.Point(165, 35);
+            this.lblGarantia.Location = new System.Drawing.Point(6, 42);
             this.lblGarantia.Name = "lblGarantia";
             this.lblGarantia.Size = new System.Drawing.Size(40, 13);
             this.lblGarantia.TabIndex = 23;
@@ -622,7 +643,7 @@
             // rbNo
             // 
             this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(67, 33);
+            this.rbNo.Location = new System.Drawing.Point(46, 19);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(39, 17);
             this.rbNo.TabIndex = 1;
@@ -634,7 +655,7 @@
             // rbSi
             // 
             this.rbSi.AutoSize = true;
-            this.rbSi.Location = new System.Drawing.Point(27, 32);
+            this.rbSi.Location = new System.Drawing.Point(6, 19);
             this.rbSi.Name = "rbSi";
             this.rbSi.Size = new System.Drawing.Size(34, 17);
             this.rbSi.TabIndex = 0;
@@ -645,14 +666,11 @@
             // 
             // grbFinReserva
             // 
-            this.grbFinReserva.Controls.Add(this.horaDeFin);
             this.grbFinReserva.Controls.Add(this.label1);
-            this.grbFinReserva.Controls.Add(this.nupMinutoFin);
-            this.grbFinReserva.Controls.Add(this.label2);
-            this.grbFinReserva.Controls.Add(this.nupHoraFin);
-            this.grbFinReserva.Location = new System.Drawing.Point(381, 19);
+            this.grbFinReserva.Controls.Add(this.horaDeFin);
+            this.grbFinReserva.Location = new System.Drawing.Point(334, 16);
             this.grbFinReserva.Name = "grbFinReserva";
-            this.grbFinReserva.Size = new System.Drawing.Size(151, 95);
+            this.grbFinReserva.Size = new System.Drawing.Size(116, 59);
             this.grbFinReserva.TabIndex = 3;
             this.grbFinReserva.TabStop = false;
             this.grbFinReserva.Text = "Hora Fin Reserva";
@@ -660,135 +678,55 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 20);
+            this.label1.Location = new System.Drawing.Point(26, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Minuto";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Hora : Minuto";
             // 
-            // nupMinutoFin
+            // horaDeFin
             // 
-            this.nupMinutoFin.Location = new System.Drawing.Point(76, 36);
-            this.nupMinutoFin.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nupMinutoFin.Name = "nupMinutoFin";
-            this.nupMinutoFin.Size = new System.Drawing.Size(55, 20);
-            this.nupMinutoFin.TabIndex = 1;
-            this.nupMinutoFin.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Hora";
-            // 
-            // nupHoraFin
-            // 
-            this.nupHoraFin.Location = new System.Drawing.Point(15, 36);
-            this.nupHoraFin.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nupHoraFin.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupHoraFin.Name = "nupHoraFin";
-            this.nupHoraFin.Size = new System.Drawing.Size(55, 20);
-            this.nupHoraFin.TabIndex = 0;
-            this.nupHoraFin.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.horaDeFin.Location = new System.Drawing.Point(6, 32);
+            this.horaDeFin.Mask = "00:00";
+            this.horaDeFin.Name = "horaDeFin";
+            this.horaDeFin.Size = new System.Drawing.Size(100, 20);
+            this.horaDeFin.TabIndex = 27;
+            this.horaDeFin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // grbInicioReserva
             // 
             this.grbInicioReserva.Controls.Add(this.horaDeInicio);
-            this.grbInicioReserva.Controls.Add(this.lblMinuto);
-            this.grbInicioReserva.Controls.Add(this.nupMinutoI);
             this.grbInicioReserva.Controls.Add(this.lblHora);
-            this.grbInicioReserva.Controls.Add(this.nupHoraInicio);
-            this.grbInicioReserva.Location = new System.Drawing.Point(224, 19);
+            this.grbInicioReserva.Location = new System.Drawing.Point(213, 16);
             this.grbInicioReserva.Name = "grbInicioReserva";
-            this.grbInicioReserva.Size = new System.Drawing.Size(151, 95);
+            this.grbInicioReserva.Size = new System.Drawing.Size(115, 59);
             this.grbInicioReserva.TabIndex = 2;
             this.grbInicioReserva.TabStop = false;
             this.grbInicioReserva.Text = "Hora Inicio Reserva";
             // 
-            // lblMinuto
+            // horaDeInicio
             // 
-            this.lblMinuto.AutoSize = true;
-            this.lblMinuto.Location = new System.Drawing.Point(79, 23);
-            this.lblMinuto.Name = "lblMinuto";
-            this.lblMinuto.Size = new System.Drawing.Size(39, 13);
-            this.lblMinuto.TabIndex = 26;
-            this.lblMinuto.Text = "Minuto";
-            // 
-            // nupMinutoI
-            // 
-            this.nupMinutoI.Location = new System.Drawing.Point(82, 39);
-            this.nupMinutoI.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nupMinutoI.Name = "nupMinutoI";
-            this.nupMinutoI.Size = new System.Drawing.Size(55, 20);
-            this.nupMinutoI.TabIndex = 1;
-            this.nupMinutoI.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.horaDeInicio.Location = new System.Drawing.Point(6, 32);
+            this.horaDeInicio.Mask = "00:00";
+            this.horaDeInicio.Name = "horaDeInicio";
+            this.horaDeInicio.Size = new System.Drawing.Size(100, 20);
+            this.horaDeInicio.TabIndex = 27;
+            this.horaDeInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.horaDeInicio.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(18, 23);
+            this.lblHora.Location = new System.Drawing.Point(23, 16);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(30, 13);
+            this.lblHora.Size = new System.Drawing.Size(71, 13);
             this.lblHora.TabIndex = 23;
-            this.lblHora.Text = "Hora";
-            // 
-            // nupHoraInicio
-            // 
-            this.nupHoraInicio.Location = new System.Drawing.Point(21, 39);
-            this.nupHoraInicio.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nupHoraInicio.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupHoraInicio.Name = "nupHoraInicio";
-            this.nupHoraInicio.Size = new System.Drawing.Size(55, 20);
-            this.nupHoraInicio.TabIndex = 0;
-            this.nupHoraInicio.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.lblHora.Text = "Hora : Minuto";
             // 
             // lblFechaReserva
             // 
             this.lblFechaReserva.AutoSize = true;
-            this.lblFechaReserva.Location = new System.Drawing.Point(15, 65);
+            this.lblFechaReserva.Location = new System.Drawing.Point(6, 55);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(95, 13);
             this.lblFechaReserva.TabIndex = 23;
@@ -796,18 +734,18 @@
             // 
             // dtpFechaReserva
             // 
-            this.dtpFechaReserva.Location = new System.Drawing.Point(18, 82);
+            this.dtpFechaReserva.Location = new System.Drawing.Point(6, 71);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
-            this.dtpFechaReserva.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaReserva.Size = new System.Drawing.Size(201, 20);
             this.dtpFechaReserva.TabIndex = 1;
             // 
             // grbTipoUsu
             // 
             this.grbTipoUsu.Controls.Add(this.rbParticular);
             this.grbTipoUsu.Controls.Add(this.rbAsociado);
-            this.grbTipoUsu.Location = new System.Drawing.Point(6, 91);
+            this.grbTipoUsu.Location = new System.Drawing.Point(6, 81);
             this.grbTipoUsu.Name = "grbTipoUsu";
-            this.grbTipoUsu.Size = new System.Drawing.Size(295, 66);
+            this.grbTipoUsu.Size = new System.Drawing.Size(157, 48);
             this.grbTipoUsu.TabIndex = 1;
             this.grbTipoUsu.TabStop = false;
             this.grbTipoUsu.Text = "Seleccion de Persona";
@@ -815,7 +753,7 @@
             // rbParticular
             // 
             this.rbParticular.AutoSize = true;
-            this.rbParticular.Location = new System.Drawing.Point(132, 31);
+            this.rbParticular.Location = new System.Drawing.Point(81, 20);
             this.rbParticular.Name = "rbParticular";
             this.rbParticular.Size = new System.Drawing.Size(69, 17);
             this.rbParticular.TabIndex = 1;
@@ -827,7 +765,7 @@
             // rbAsociado
             // 
             this.rbAsociado.AutoSize = true;
-            this.rbAsociado.Location = new System.Drawing.Point(12, 31);
+            this.rbAsociado.Location = new System.Drawing.Point(6, 20);
             this.rbAsociado.Name = "rbAsociado";
             this.rbAsociado.Size = new System.Drawing.Size(69, 17);
             this.rbAsociado.TabIndex = 0;
@@ -838,6 +776,8 @@
             // 
             // gbInfoAsociado
             // 
+            this.gbInfoAsociado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInfoAsociado.Controls.Add(this.txtTelefono);
             this.gbInfoAsociado.Controls.Add(this.lblTelefono);
             this.gbInfoAsociado.Controls.Add(this.lblCedula);
@@ -852,9 +792,9 @@
             this.gbInfoAsociado.Controls.Add(this.lblApellidoPat);
             this.gbInfoAsociado.Controls.Add(this.lblNombreAso);
             this.gbInfoAsociado.Controls.Add(this.txtCodigoAso);
-            this.gbInfoAsociado.Location = new System.Drawing.Point(6, 163);
+            this.gbInfoAsociado.Location = new System.Drawing.Point(6, 135);
             this.gbInfoAsociado.Name = "gbInfoAsociado";
-            this.gbInfoAsociado.Size = new System.Drawing.Size(611, 144);
+            this.gbInfoAsociado.Size = new System.Drawing.Size(698, 136);
             this.gbInfoAsociado.TabIndex = 3;
             this.gbInfoAsociado.TabStop = false;
             this.gbInfoAsociado.Text = "Informacion Solicitante";
@@ -862,7 +802,7 @@
             // txtTelefono
             // 
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefono.Location = new System.Drawing.Point(375, 53);
+            this.txtTelefono.Location = new System.Drawing.Point(357, 32);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.ReadOnly = true;
             this.txtTelefono.Size = new System.Drawing.Size(201, 20);
@@ -872,7 +812,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(373, 37);
+            this.lblTelefono.Location = new System.Drawing.Point(360, 16);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(133, 13);
             this.lblTelefono.TabIndex = 29;
@@ -881,7 +821,7 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(35, 19);
+            this.lblCedula.Location = new System.Drawing.Point(6, 16);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(102, 13);
             this.lblCedula.TabIndex = 23;
@@ -890,7 +830,7 @@
             // txtCedulaIdentidad
             // 
             this.txtCedulaIdentidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCedulaIdentidad.Location = new System.Drawing.Point(29, 37);
+            this.txtCedulaIdentidad.Location = new System.Drawing.Point(6, 32);
             this.txtCedulaIdentidad.Name = "txtCedulaIdentidad";
             this.txtCedulaIdentidad.ReadOnly = true;
             this.txtCedulaIdentidad.Size = new System.Drawing.Size(118, 20);
@@ -901,7 +841,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(29, 99);
+            this.lblId.Location = new System.Drawing.Point(6, 94);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(52, 13);
             this.lblId.TabIndex = 21;
@@ -910,7 +850,7 @@
             // txtIdInterno
             // 
             this.txtIdInterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIdInterno.Location = new System.Drawing.Point(29, 115);
+            this.txtIdInterno.Location = new System.Drawing.Point(6, 110);
             this.txtIdInterno.Name = "txtIdInterno";
             this.txtIdInterno.ReadOnly = true;
             this.txtIdInterno.Size = new System.Drawing.Size(118, 20);
@@ -920,7 +860,7 @@
             // lblApellidoMat
             // 
             this.lblApellidoMat.AutoSize = true;
-            this.lblApellidoMat.Location = new System.Drawing.Point(373, 83);
+            this.lblApellidoMat.Location = new System.Drawing.Point(360, 55);
             this.lblApellidoMat.Name = "lblApellidoMat";
             this.lblApellidoMat.Size = new System.Drawing.Size(90, 13);
             this.lblApellidoMat.TabIndex = 21;
@@ -929,7 +869,7 @@
             // txtApellido2
             // 
             this.txtApellido2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtApellido2.Location = new System.Drawing.Point(375, 99);
+            this.txtApellido2.Location = new System.Drawing.Point(357, 71);
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.ReadOnly = true;
             this.txtApellido2.Size = new System.Drawing.Size(201, 20);
@@ -939,7 +879,7 @@
             // lblCodigoAso
             // 
             this.lblCodigoAso.AutoSize = true;
-            this.lblCodigoAso.Location = new System.Drawing.Point(31, 60);
+            this.lblCodigoAso.Location = new System.Drawing.Point(6, 55);
             this.lblCodigoAso.Name = "lblCodigoAso";
             this.lblCodigoAso.Size = new System.Drawing.Size(73, 13);
             this.lblCodigoAso.TabIndex = 16;
@@ -948,16 +888,16 @@
             // txtApellido1
             // 
             this.txtApellido1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtApellido1.Location = new System.Drawing.Point(169, 100);
+            this.txtApellido1.Location = new System.Drawing.Point(130, 71);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.ReadOnly = true;
-            this.txtApellido1.Size = new System.Drawing.Size(201, 20);
+            this.txtApellido1.Size = new System.Drawing.Size(221, 20);
             this.txtApellido1.TabIndex = 5;
             // 
             // txtNombreAsoc
             // 
             this.txtNombreAsoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombreAsoc.Location = new System.Drawing.Point(169, 54);
+            this.txtNombreAsoc.Location = new System.Drawing.Point(136, 32);
             this.txtNombreAsoc.Name = "txtNombreAsoc";
             this.txtNombreAsoc.ReadOnly = true;
             this.txtNombreAsoc.Size = new System.Drawing.Size(201, 20);
@@ -966,7 +906,7 @@
             // lblApellidoPat
             // 
             this.lblApellidoPat.AutoSize = true;
-            this.lblApellidoPat.Location = new System.Drawing.Point(170, 83);
+            this.lblApellidoPat.Location = new System.Drawing.Point(140, 55);
             this.lblApellidoPat.Name = "lblApellidoPat";
             this.lblApellidoPat.Size = new System.Drawing.Size(76, 13);
             this.lblApellidoPat.TabIndex = 18;
@@ -975,7 +915,7 @@
             // lblNombreAso
             // 
             this.lblNombreAso.AutoSize = true;
-            this.lblNombreAso.Location = new System.Drawing.Point(170, 37);
+            this.lblNombreAso.Location = new System.Drawing.Point(140, 16);
             this.lblNombreAso.Name = "lblNombreAso";
             this.lblNombreAso.Size = new System.Drawing.Size(96, 13);
             this.lblNombreAso.TabIndex = 15;
@@ -984,7 +924,7 @@
             // txtCodigoAso
             // 
             this.txtCodigoAso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoAso.Location = new System.Drawing.Point(29, 76);
+            this.txtCodigoAso.Location = new System.Drawing.Point(6, 71);
             this.txtCodigoAso.Name = "txtCodigoAso";
             this.txtCodigoAso.ReadOnly = true;
             this.txtCodigoAso.Size = new System.Drawing.Size(118, 20);
@@ -992,41 +932,12 @@
             this.txtCodigoAso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCodigoAso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoAso_KeyPress);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(536, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 46);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Verificar reserva";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // horaDeInicio
-            // 
-            this.horaDeInicio.Location = new System.Drawing.Point(7, 63);
-            this.horaDeInicio.Mask = "00:00";
-            this.horaDeInicio.Name = "horaDeInicio";
-            this.horaDeInicio.Size = new System.Drawing.Size(100, 20);
-            this.horaDeInicio.TabIndex = 27;
-            this.horaDeInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.horaDeInicio.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            // 
-            // horaDeFin
-            // 
-            this.horaDeFin.Location = new System.Drawing.Point(6, 62);
-            this.horaDeFin.Mask = "00:00";
-            this.horaDeFin.Name = "horaDeFin";
-            this.horaDeFin.Size = new System.Drawing.Size(100, 20);
-            this.horaDeFin.TabIndex = 27;
-            this.horaDeFin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(656, 525);
+            this.ClientSize = new System.Drawing.Size(718, 559);
             this.Controls.Add(this.tabControl1);
             this.Name = "FReservas";
             this.Text = "Reservas";
@@ -1047,12 +958,8 @@
             this.grbGarantia.PerformLayout();
             this.grbFinReserva.ResumeLayout(false);
             this.grbFinReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMinutoFin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHoraFin)).EndInit();
             this.grbInicioReserva.ResumeLayout(false);
             this.grbInicioReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMinutoI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHoraInicio)).EndInit();
             this.grbTipoUsu.ResumeLayout(false);
             this.grbTipoUsu.PerformLayout();
             this.gbInfoAsociado.ResumeLayout(false);
@@ -1085,15 +992,8 @@
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.GroupBox grbFinReserva;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nupMinutoFin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nupHoraFin;
         private System.Windows.Forms.GroupBox grbInicioReserva;
-        private System.Windows.Forms.Label lblMinuto;
-        private System.Windows.Forms.NumericUpDown nupMinutoI;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.NumericUpDown nupHoraInicio;
         private System.Windows.Forms.Label lblFechaReserva;
         private System.Windows.Forms.DateTimePicker dtpFechaReserva;
         private System.Windows.Forms.GroupBox grbTipoUsu;
@@ -1142,5 +1042,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox horaDeInicio;
         private System.Windows.Forms.MaskedTextBox horaDeFin;
+        private System.Windows.Forms.Label label1;
     }
 }

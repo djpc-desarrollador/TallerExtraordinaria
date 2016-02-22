@@ -71,7 +71,7 @@
             this.labelDescripcion.Location = new System.Drawing.Point(6, 50);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.labelDescripcion.TabIndex = 3;
+            this.labelDescripcion.TabIndex = 2;
             this.labelDescripcion.Text = "&Descripción:";
             // 
             // labelCodigo
@@ -80,7 +80,7 @@
             this.labelCodigo.Location = new System.Drawing.Point(6, 23);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(43, 13);
-            this.labelCodigo.TabIndex = 2;
+            this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "&Código:";
             // 
             // textBoxDescripcion
@@ -90,7 +90,7 @@
             this.textBoxDescripcion.Location = new System.Drawing.Point(78, 47);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(224, 20);
-            this.textBoxDescripcion.TabIndex = 1;
+            this.textBoxDescripcion.TabIndex = 3;
             // 
             // textBoxCodigo
             // 
@@ -98,7 +98,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(55, 20);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(87, 20);
-            this.textBoxCodigo.TabIndex = 0;
+            this.textBoxCodigo.TabIndex = 1;
             this.textBoxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBoxOperaciones
@@ -184,6 +184,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -200,14 +201,15 @@
             // 
             this.errorDescripcion.ContainerControl = this;
             // 
-            // H1_Vista
+            // VistaTipoArea
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 482);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxTipoArea);
-            this.Name = "H1_Vista";
+            this.Name = "VistaTipoArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo de area";
             this.Load += new System.EventHandler(this.H1_Vista_Load);

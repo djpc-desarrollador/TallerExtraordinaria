@@ -74,6 +74,8 @@
             // 
             // grbReserva
             // 
+            this.grbReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbReserva.Controls.Add(this.lblArea);
             this.grbReserva.Controls.Add(this.txtArea);
             this.grbReserva.Controls.Add(this.label2);
@@ -90,10 +92,10 @@
             this.grbReserva.Controls.Add(this.lblGarantia);
             this.grbReserva.Controls.Add(this.lblFechaReserva);
             this.grbReserva.Controls.Add(this.dtpFechaReserva);
-            this.grbReserva.Location = new System.Drawing.Point(463, 101);
+            this.grbReserva.Location = new System.Drawing.Point(463, 90);
             this.grbReserva.Name = "grbReserva";
-            this.grbReserva.Size = new System.Drawing.Size(369, 278);
-            this.grbReserva.TabIndex = 29;
+            this.grbReserva.Size = new System.Drawing.Size(354, 278);
+            this.grbReserva.TabIndex = 6;
             this.grbReserva.TabStop = false;
             this.grbReserva.Text = "Informacion Reserva";
             // 
@@ -103,17 +105,19 @@
             this.lblArea.Location = new System.Drawing.Point(197, 16);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(76, 13);
-            this.lblArea.TabIndex = 33;
+            this.lblArea.TabIndex = 2;
             this.lblArea.Text = "Area Ocupada";
             // 
             // txtArea
             // 
+            this.txtArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtArea.Location = new System.Drawing.Point(191, 34);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
-            this.txtArea.Size = new System.Drawing.Size(164, 20);
-            this.txtArea.TabIndex = 34;
+            this.txtArea.Size = new System.Drawing.Size(157, 20);
+            this.txtArea.TabIndex = 3;
             this.txtArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -122,19 +126,22 @@
             this.label2.Location = new System.Drawing.Point(12, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 31;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Codigo Reserva";
             // 
             // txtObservacion
             // 
+            this.txtObservacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Location = new System.Drawing.Point(6, 192);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.ReadOnly = true;
             this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservacion.Size = new System.Drawing.Size(341, 48);
-            this.txtObservacion.TabIndex = 26;
+            this.txtObservacion.Size = new System.Drawing.Size(342, 80);
+            this.txtObservacion.TabIndex = 15;
             // 
             // txtReservaCod
             // 
@@ -143,7 +150,7 @@
             this.txtReservaCod.Name = "txtReservaCod";
             this.txtReservaCod.ReadOnly = true;
             this.txtReservaCod.Size = new System.Drawing.Size(168, 20);
-            this.txtReservaCod.TabIndex = 32;
+            this.txtReservaCod.TabIndex = 1;
             this.txtReservaCod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblCedula
@@ -152,17 +159,19 @@
             this.lblCedula.Location = new System.Drawing.Point(6, 57);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(102, 13);
-            this.lblCedula.TabIndex = 23;
+            this.lblCedula.TabIndex = 4;
             this.lblCedula.Text = "Cedula de Identidad";
             // 
             // txtApellido1
             // 
+            this.txtApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido1.Location = new System.Drawing.Point(191, 114);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.ReadOnly = true;
-            this.txtApellido1.Size = new System.Drawing.Size(164, 20);
-            this.txtApellido1.TabIndex = 19;
+            this.txtApellido1.Size = new System.Drawing.Size(157, 20);
+            this.txtApellido1.TabIndex = 11;
             // 
             // lblApellidoPat
             // 
@@ -170,7 +179,7 @@
             this.lblApellidoPat.Location = new System.Drawing.Point(188, 98);
             this.lblApellidoPat.Name = "lblApellidoPat";
             this.lblApellidoPat.Size = new System.Drawing.Size(76, 13);
-            this.lblApellidoPat.TabIndex = 18;
+            this.lblApellidoPat.TabIndex = 10;
             this.lblApellidoPat.Text = "Primer Apellido";
             // 
             // txtCedulaIdentidad
@@ -180,7 +189,7 @@
             this.txtCedulaIdentidad.Name = "txtCedulaIdentidad";
             this.txtCedulaIdentidad.ReadOnly = true;
             this.txtCedulaIdentidad.Size = new System.Drawing.Size(168, 20);
-            this.txtCedulaIdentidad.TabIndex = 24;
+            this.txtCedulaIdentidad.TabIndex = 5;
             this.txtCedulaIdentidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNombreAsoc
@@ -190,7 +199,7 @@
             this.txtNombreAsoc.Name = "txtNombreAsoc";
             this.txtNombreAsoc.ReadOnly = true;
             this.txtNombreAsoc.Size = new System.Drawing.Size(167, 20);
-            this.txtNombreAsoc.TabIndex = 14;
+            this.txtNombreAsoc.TabIndex = 9;
             // 
             // lblObservacion
             // 
@@ -198,7 +207,7 @@
             this.lblObservacion.Location = new System.Drawing.Point(6, 176);
             this.lblObservacion.Name = "lblObservacion";
             this.lblObservacion.Size = new System.Drawing.Size(67, 13);
-            this.lblObservacion.TabIndex = 25;
+            this.lblObservacion.TabIndex = 14;
             this.lblObservacion.Text = "Observacion";
             // 
             // lblNombreAso
@@ -207,16 +216,18 @@
             this.lblNombreAso.Location = new System.Drawing.Point(12, 98);
             this.lblNombreAso.Name = "lblNombreAso";
             this.lblNombreAso.Size = new System.Drawing.Size(96, 13);
-            this.lblNombreAso.TabIndex = 15;
+            this.lblNombreAso.TabIndex = 8;
             this.lblNombreAso.Text = "Nombre Solicitante";
             // 
             // txtGarantia
             // 
+            this.txtGarantia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGarantia.Location = new System.Drawing.Point(191, 73);
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.ReadOnly = true;
-            this.txtGarantia.Size = new System.Drawing.Size(164, 20);
-            this.txtGarantia.TabIndex = 24;
+            this.txtGarantia.Size = new System.Drawing.Size(157, 20);
+            this.txtGarantia.TabIndex = 7;
             // 
             // lblGarantia
             // 
@@ -233,33 +244,35 @@
             this.lblFechaReserva.Location = new System.Drawing.Point(7, 137);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(95, 13);
-            this.lblFechaReserva.TabIndex = 23;
+            this.lblFechaReserva.TabIndex = 12;
             this.lblFechaReserva.Text = "Fecha de Reserva";
             // 
             // dtpFechaReserva
             // 
+            this.dtpFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaReserva.Enabled = false;
             this.dtpFechaReserva.Location = new System.Drawing.Point(6, 153);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
-            this.dtpFechaReserva.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaReserva.TabIndex = 0;
+            this.dtpFechaReserva.Size = new System.Drawing.Size(342, 20);
+            this.dtpFechaReserva.TabIndex = 13;
             // 
             // lblCodigoReserva
             // 
             this.lblCodigoReserva.AutoSize = true;
-            this.lblCodigoReserva.Location = new System.Drawing.Point(6, 57);
+            this.lblCodigoReserva.Location = new System.Drawing.Point(6, 55);
             this.lblCodigoReserva.Name = "lblCodigoReserva";
             this.lblCodigoReserva.Size = new System.Drawing.Size(83, 13);
-            this.lblCodigoReserva.TabIndex = 29;
+            this.lblCodigoReserva.TabIndex = 2;
             this.lblCodigoReserva.Text = "Codigo Reserva";
             // 
             // txtCodReserva
             // 
             this.txtCodReserva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodReserva.Location = new System.Drawing.Point(9, 73);
+            this.txtCodReserva.Location = new System.Drawing.Point(6, 71);
             this.txtCodReserva.Name = "txtCodReserva";
             this.txtCodReserva.Size = new System.Drawing.Size(212, 20);
-            this.txtCodReserva.TabIndex = 30;
+            this.txtCodReserva.TabIndex = 3;
             this.txtCodReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCodReserva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodReserva_KeyPress);
             // 
@@ -278,40 +291,42 @@
             this.gbInfoAsociado.Controls.Add(this.lblCodigoReserva);
             this.gbInfoAsociado.Controls.Add(this.dtpFechaActual);
             this.gbInfoAsociado.Controls.Add(this.txtCodReserva);
-            this.gbInfoAsociado.Location = new System.Drawing.Point(12, 101);
+            this.gbInfoAsociado.Location = new System.Drawing.Point(12, 90);
             this.gbInfoAsociado.Name = "gbInfoAsociado";
-            this.gbInfoAsociado.Size = new System.Drawing.Size(445, 278);
-            this.gbInfoAsociado.TabIndex = 28;
+            this.gbInfoAsociado.Size = new System.Drawing.Size(445, 277);
+            this.gbInfoAsociado.TabIndex = 1;
             this.gbInfoAsociado.TabStop = false;
             this.gbInfoAsociado.Text = "Pago de Reserva";
             // 
             // lblBs
             // 
             this.lblBs.AutoSize = true;
-            this.lblBs.Font = new System.Drawing.Font("Nueva Std", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBs.Location = new System.Drawing.Point(304, 248);
+            this.lblBs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBs.Location = new System.Drawing.Point(304, 242);
             this.lblBs.Name = "lblBs";
-            this.lblBs.Size = new System.Drawing.Size(29, 20);
-            this.lblBs.TabIndex = 33;
+            this.lblBs.Size = new System.Drawing.Size(40, 25);
+            this.lblBs.TabIndex = 12;
             this.lblBs.Text = "Bs.";
             // 
             // lblCodigoPago
             // 
             this.lblCodigoPago.AutoSize = true;
-            this.lblCodigoPago.Location = new System.Drawing.Point(152, 16);
+            this.lblCodigoPago.Location = new System.Drawing.Point(171, 16);
             this.lblCodigoPago.Name = "lblCodigoPago";
             this.lblCodigoPago.Size = new System.Drawing.Size(117, 13);
-            this.lblCodigoPago.TabIndex = 31;
+            this.lblCodigoPago.TabIndex = 0;
             this.lblCodigoPago.Text = "Codigo de Transaccion";
             // 
             // txtCodPago
             // 
+            this.txtCodPago.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodPago.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodPago.Location = new System.Drawing.Point(98, 32);
+            this.txtCodPago.Location = new System.Drawing.Point(6, 32);
             this.txtCodPago.Name = "txtCodPago";
             this.txtCodPago.ReadOnly = true;
-            this.txtCodPago.Size = new System.Drawing.Size(212, 20);
-            this.txtCodPago.TabIndex = 32;
+            this.txtCodPago.Size = new System.Drawing.Size(433, 20);
+            this.txtCodPago.TabIndex = 1;
             this.txtCodPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMonto
@@ -319,83 +334,85 @@
             this.txtMonto.Location = new System.Drawing.Point(98, 248);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(200, 20);
-            this.txtMonto.TabIndex = 28;
+            this.txtMonto.TabIndex = 11;
             // 
             // lblMonto
             // 
             this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(152, 232);
+            this.lblMonto.Location = new System.Drawing.Point(6, 251);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(91, 13);
-            this.lblMonto.TabIndex = 27;
+            this.lblMonto.TabIndex = 10;
             this.lblMonto.Text = "Monto a Cancelar";
             // 
             // txtPagoObserv
             // 
             this.txtPagoObserv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPagoObserv.Location = new System.Drawing.Point(6, 181);
+            this.txtPagoObserv.Location = new System.Drawing.Point(6, 177);
             this.txtPagoObserv.Multiline = true;
             this.txtPagoObserv.Name = "txtPagoObserv";
             this.txtPagoObserv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPagoObserv.Size = new System.Drawing.Size(421, 48);
-            this.txtPagoObserv.TabIndex = 28;
+            this.txtPagoObserv.TabIndex = 9;
             // 
             // txtPagoMotivo
             // 
             this.txtPagoMotivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPagoMotivo.Location = new System.Drawing.Point(9, 114);
+            this.txtPagoMotivo.Location = new System.Drawing.Point(6, 110);
             this.txtPagoMotivo.Multiline = true;
             this.txtPagoMotivo.Name = "txtPagoMotivo";
             this.txtPagoMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPagoMotivo.Size = new System.Drawing.Size(418, 48);
-            this.txtPagoMotivo.TabIndex = 28;
+            this.txtPagoMotivo.TabIndex = 7;
             this.txtPagoMotivo.Text = "PAGO RESERVA";
             // 
             // lblPagoObservacion
             // 
             this.lblPagoObservacion.AutoSize = true;
-            this.lblPagoObservacion.Location = new System.Drawing.Point(6, 165);
+            this.lblPagoObservacion.Location = new System.Drawing.Point(6, 161);
             this.lblPagoObservacion.Name = "lblPagoObservacion";
             this.lblPagoObservacion.Size = new System.Drawing.Size(67, 13);
-            this.lblPagoObservacion.TabIndex = 27;
+            this.lblPagoObservacion.TabIndex = 8;
             this.lblPagoObservacion.Text = "Observacion";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(228, 57);
+            this.lblFecha.Location = new System.Drawing.Point(224, 55);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(80, 13);
-            this.lblFecha.TabIndex = 28;
+            this.lblFecha.TabIndex = 4;
             this.lblFecha.Text = "Fecha de Pago";
             // 
             // lblMotivo
             // 
             this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Location = new System.Drawing.Point(6, 98);
+            this.lblMotivo.Location = new System.Drawing.Point(6, 94);
             this.lblMotivo.Name = "lblMotivo";
             this.lblMotivo.Size = new System.Drawing.Size(39, 13);
-            this.lblMotivo.TabIndex = 27;
+            this.lblMotivo.TabIndex = 6;
             this.lblMotivo.Text = "Motivo";
             // 
             // dtpFechaActual
             // 
             this.dtpFechaActual.Enabled = false;
-            this.dtpFechaActual.Location = new System.Drawing.Point(227, 73);
+            this.dtpFechaActual.Location = new System.Drawing.Point(224, 71);
             this.dtpFechaActual.Name = "dtpFechaActual";
             this.dtpFechaActual.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaActual.TabIndex = 27;
+            this.dtpFechaActual.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.btnBuscar);
             this.flowLayoutPanel1.Controls.Add(this.btnPagar);
             this.flowLayoutPanel1.Controls.Add(this.btnCancel);
             this.flowLayoutPanel1.Controls.Add(this.btnEliminado);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 72);
-            this.flowLayoutPanel1.TabIndex = 30;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(805, 72);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnBuscar
             // 
@@ -409,7 +426,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(3, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(64, 64);
-            this.btnBuscar.TabIndex = 40;
+            this.btnBuscar.TabIndex = 0;
             this.tTip.SetToolTip(this.btnBuscar, "Buscar Reserva");
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -423,7 +440,7 @@
             this.btnPagar.Location = new System.Drawing.Point(73, 3);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(64, 64);
-            this.btnPagar.TabIndex = 0;
+            this.btnPagar.TabIndex = 1;
             this.tTip.SetToolTip(this.btnPagar, "Pagar Reserva");
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
@@ -437,7 +454,7 @@
             this.btnCancel.Location = new System.Drawing.Point(143, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(64, 64);
-            this.btnCancel.TabIndex = 39;
+            this.btnCancel.TabIndex = 2;
             this.tTip.SetToolTip(this.btnCancel, "Cancelar");
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -451,7 +468,7 @@
             this.btnEliminado.Location = new System.Drawing.Point(213, 3);
             this.btnEliminado.Name = "btnEliminado";
             this.btnEliminado.Size = new System.Drawing.Size(64, 64);
-            this.btnEliminado.TabIndex = 1;
+            this.btnEliminado.TabIndex = 3;
             this.tTip.SetToolTip(this.btnEliminado, "Anular Pago");
             this.btnEliminado.UseVisualStyleBackColor = true;
             // 
@@ -461,7 +478,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(850, 436);
+            this.ClientSize = new System.Drawing.Size(829, 377);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.grbReserva);
             this.Controls.Add(this.gbInfoAsociado);

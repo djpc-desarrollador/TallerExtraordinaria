@@ -162,7 +162,16 @@ namespace Software
         // CARGA LOS BENEFICIARIOS AL DATAGRIEDVIEW
         private void CargarBeneficiarios()
         {
-            dgvListaBenef.DataSource = this.nBeneficiario.listarBeneficiarioCodigo(Global.asociadoGlobal.Id);
+            var a = this.nBeneficiario.listarBeneficiarioCodigo(Global.asociadoGlobal.Id);
+
+            if (a == null || a.Count == 0)
+            {
+                this.Dispose();
+                MessageBox.Show(string.Format("El asociado {0} {1} {2} no tiene ningun beneficiado.",Global.asociadoGlobal.Apellido1,Global.asociadoGlobal.Apellido2,Global.asociadoGlobal.Nombre));
+                return;
+            }
+
+            dgvListaBenef.DataSource = a;
             dgvListaBenef.Columns.Remove("Asociado");
             dgvListaBenef.Columns.Remove("Parentesco");
             dgvListaBenef.Columns.Remove("IdAsociado");

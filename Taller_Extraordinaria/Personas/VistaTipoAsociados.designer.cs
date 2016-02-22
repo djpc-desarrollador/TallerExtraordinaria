@@ -60,7 +60,7 @@
             this.groupBoxTipoArea.Controls.Add(this.textBoxCodigo);
             this.groupBoxTipoArea.Location = new System.Drawing.Point(13, 13);
             this.groupBoxTipoArea.Name = "groupBoxTipoArea";
-            this.groupBoxTipoArea.Size = new System.Drawing.Size(420, 77);
+            this.groupBoxTipoArea.Size = new System.Drawing.Size(415, 77);
             this.groupBoxTipoArea.TabIndex = 0;
             this.groupBoxTipoArea.TabStop = false;
             this.groupBoxTipoArea.Text = "Datos";
@@ -71,7 +71,7 @@
             this.labelDescripcion.Location = new System.Drawing.Point(6, 50);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.labelDescripcion.TabIndex = 3;
+            this.labelDescripcion.TabIndex = 2;
             this.labelDescripcion.Text = "&Descripción:";
             // 
             // labelCodigo
@@ -80,7 +80,7 @@
             this.labelCodigo.Location = new System.Drawing.Point(6, 23);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(43, 13);
-            this.labelCodigo.TabIndex = 2;
+            this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "&Código:";
             // 
             // textBoxDescripcion
@@ -89,8 +89,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDescripcion.Location = new System.Drawing.Point(78, 47);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(224, 20);
-            this.textBoxDescripcion.TabIndex = 1;
+            this.textBoxDescripcion.Size = new System.Drawing.Size(219, 20);
+            this.textBoxDescripcion.TabIndex = 3;
             // 
             // textBoxCodigo
             // 
@@ -98,7 +98,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(55, 20);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(87, 20);
-            this.textBoxCodigo.TabIndex = 0;
+            this.textBoxCodigo.TabIndex = 1;
             this.textBoxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBoxOperaciones
@@ -112,7 +112,7 @@
             this.groupBoxOperaciones.Controls.Add(this.buttonInsertar);
             this.groupBoxOperaciones.Location = new System.Drawing.Point(13, 96);
             this.groupBoxOperaciones.Name = "groupBoxOperaciones";
-            this.groupBoxOperaciones.Size = new System.Drawing.Size(420, 56);
+            this.groupBoxOperaciones.Size = new System.Drawing.Size(415, 56);
             this.groupBoxOperaciones.TabIndex = 1;
             this.groupBoxOperaciones.TabStop = false;
             this.groupBoxOperaciones.Text = "Operaciones";
@@ -175,7 +175,7 @@
             this.groupBoxRegistros.Controls.Add(this.dataGridViewRegistros);
             this.groupBoxRegistros.Location = new System.Drawing.Point(13, 159);
             this.groupBoxRegistros.Name = "groupBoxRegistros";
-            this.groupBoxRegistros.Size = new System.Drawing.Size(420, 311);
+            this.groupBoxRegistros.Size = new System.Drawing.Size(415, 311);
             this.groupBoxRegistros.TabIndex = 2;
             this.groupBoxRegistros.TabStop = false;
             this.groupBoxRegistros.Text = "Tipos de asociados registrados";
@@ -184,6 +184,7 @@
             // 
             this.dataGridViewRegistros.AllowUserToAddRows = false;
             this.dataGridViewRegistros.AllowUserToDeleteRows = false;
+            this.dataGridViewRegistros.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistros.Location = new System.Drawing.Point(3, 16);
@@ -192,7 +193,7 @@
             this.dataGridViewRegistros.ReadOnly = true;
             this.dataGridViewRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRegistros.ShowEditingIcon = false;
-            this.dataGridViewRegistros.Size = new System.Drawing.Size(414, 292);
+            this.dataGridViewRegistros.Size = new System.Drawing.Size(409, 292);
             this.dataGridViewRegistros.TabIndex = 0;
             this.dataGridViewRegistros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRegistros_CellClick);
             // 
@@ -200,14 +201,15 @@
             // 
             this.errorDescripcion.ContainerControl = this;
             // 
-            // H2_Vista
+            // VistaTipoAsociados
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(445, 482);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(440, 482);
             this.Controls.Add(this.groupBoxRegistros);
             this.Controls.Add(this.groupBoxOperaciones);
             this.Controls.Add(this.groupBoxTipoArea);
-            this.Name = "H2_Vista";
+            this.Name = "VistaTipoAsociados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TIPO DE ASOCIADO";
             this.Load += new System.EventHandler(this.H1_Vista_Load);
